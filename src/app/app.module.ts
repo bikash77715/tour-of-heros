@@ -3,12 +3,17 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 
+import {FormsModule} from '@angular/forms';
+import {HeroDetailComponent} from './hero-detail.component'; // for using [(ngModel)]
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeroDetailComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule // <-- import the FormsModule before binding with [(ngModel)]
   ],
   providers: [],
   bootstrap: [AppComponent]
